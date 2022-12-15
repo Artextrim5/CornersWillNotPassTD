@@ -252,6 +252,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &755567132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 755567133}
+  m_Layer: 0
+  m_Name: ProjectileSpownPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &755567133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755567132}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.22, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1055506153}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &961748809
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,6 +380,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1802994345}
+  - {fileID: 755567133}
   m_Father: {fileID: 2075921238}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -362,6 +394,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1363454982}
   - component: {fileID: 1363454984}
+  - component: {fileID: 1363454986}
+  - component: {fileID: 1363454985}
   - component: {fileID: 1363454983}
   m_Layer: 0
   m_Name: One_Missile_Turret
@@ -415,6 +449,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: 3.3
+--- !u!114 &1363454985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363454981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a622e817e2c55e4b96628654bdcff57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1307049121074952127, guid: 2fcb46e7f2436494b848bfb3fa0f943c, type: 3}
+  poolSize: 10
+--- !u!114 &1363454986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363454981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7074eb6de6b128439024e25e9c1cc89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSpownPosition: {fileID: 755567133}
 --- !u!1 &1378255450
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,7 +724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spownMod: 0
-  numberEnemyToSpown: 3
+  numberEnemyToSpown: 1
   delayBtwWaves: 5
   delayBtwSpawns: 0.5
   minRandomDelay: 1

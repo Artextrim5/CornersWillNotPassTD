@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     public float MoveSpeed { get; set; }
     public WayPoint WayPoint { get; set; }
 
+    public EnemyHealth EnemyHealth { get; set; }
 
     public Vector3 CurrentWaypointPosition => WayPoint.GetWaypointPosition(_currentWaypointIndex);
 
@@ -27,6 +28,7 @@ public class Enemy : MonoBehaviour
     {
         _enemyHealth = GetComponent<EnemyHealth>();
         _currentWaypointIndex = 0;
+        EnemyHealth = GetComponent<EnemyHealth>();
         MoveSpeed = moveSpeed;
         _lustPointPosition = transform.position;
         _enemyVisual = transform.Find("Visual").gameObject;
