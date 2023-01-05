@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class EnemyHealth : MonoBehaviour
 {
     public static Action <Enemy> OnEnemyKilled; // можно передавать параметр через ивент <>
-    public static Action<Enemy> OnEnemyHit;
+    public static Action <Enemy> OnEnemyHit;
 
 
     [SerializeField] private GameObject healthBarPrefab;
