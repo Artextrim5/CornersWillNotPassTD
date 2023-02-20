@@ -14,7 +14,6 @@ public class Turret : MonoBehaviour
 
     private void Start()
     {
-
         _gameStarted = true;
         _enrmies = new List<Enemy>();
     }

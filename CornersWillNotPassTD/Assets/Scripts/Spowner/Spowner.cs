@@ -26,7 +26,7 @@ public class Spowner : MonoBehaviour
 
     private float _spawnTimer;
     private int _enemesSpowned;
-    private int _eneiesRamaining;
+    private int _enemiesRamaining;
 
     private ObgectPooler _pooler;
     private WayPoint _wayPoint;
@@ -36,7 +36,7 @@ public class Spowner : MonoBehaviour
         _pooler = GetComponent<ObgectPooler>();
         _wayPoint = GetComponent<WayPoint>();
 
-        _eneiesRamaining = numberEnemyToSpown;
+        _enemiesRamaining = numberEnemyToSpown;
     }
 
     void Update()
@@ -88,15 +88,15 @@ public class Spowner : MonoBehaviour
     private IEnumerator NextWave()
     {
         yield return new WaitForSeconds(delayBtwWaves);
-        _eneiesRamaining = numberEnemyToSpown;
+        _enemiesRamaining = numberEnemyToSpown;
         _spawnTimer = 0;
         _enemesSpowned = 0;
     }
 
     private void RecordEnemy(Enemy enemy)
     {
-        _eneiesRamaining--;
-        if (_eneiesRamaining <= 0)
+        _enemiesRamaining--;
+        if (_enemiesRamaining <= 0)
         {
             StartCoroutine(NextWave());
         }

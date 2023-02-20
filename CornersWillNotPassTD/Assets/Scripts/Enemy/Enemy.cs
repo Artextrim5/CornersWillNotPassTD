@@ -69,7 +69,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            _enemyVisual.transform.localScale = new Vector3(-1, 1, 1);
+            _enemyVisual.transform.localScale = new Vector3(-1f, 1, 1);
         }
     }
 

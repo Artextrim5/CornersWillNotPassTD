@@ -45,7 +45,10 @@ public class ObgectPooler : MonoBehaviour
                 return _pool[i];
             }
         }
-        return CreateInstance();
+        GameObject instanceAddToPool = CreateInstance();
+        poolSize++;
+        _pool.Add(instanceAddToPool);
+        return instanceAddToPool;
     }
 
     public static void ReturnToPool(GameObject instance)
